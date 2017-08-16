@@ -2,8 +2,10 @@
 
     function KskAttributeMaxLength() {
 
-        var attributeName = 'ksk_additional_description',
-            maxlength = 10,
+        var config = window.document.getElementById('ksk-attribute-max-length');
+
+        var attributeName = config.dataset.attributeName,
+            maxlength = config.dataset.maxLength,
             charCounterContainer = window.document.createElement('span');
 
         window.document.getElementsByName('__attribute_' + attributeName).forEach(function(area) {
