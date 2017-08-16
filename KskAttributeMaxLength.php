@@ -31,6 +31,9 @@ class KskAttributeMaxLength extends Plugin
         $controller = $args->get('subject');
         $view = $controller->View();
 
+        $config = $this->container->get('shopware.plugin.config_reader')->getByPluginName($this->getName());
+        $view->assign('ksk_attribute_max_length', $config);
+
         $view->addTemplateDir(implode(DIRECTORY_SEPARATOR, [$this->getPath(), 'Resources', 'views']));
         $view->extendsTemplate(implode(DIRECTORY_SEPARATOR, ['backend', 'plugins', 'ksk_attribute_max_length', 'header.tpl']));
     }
