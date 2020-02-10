@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace KskAttributeMaxLength;
 
@@ -6,10 +6,6 @@ use Enlight_Controller_Action;
 use Enlight_Event_EventArgs;
 use Shopware\Components\Plugin;
 
-/**
- * Class KskAttributeMaxLength
- * @package KskAttributeMaxLength
- */
 class KskAttributeMaxLength extends Plugin
 {
     /**
@@ -22,9 +18,6 @@ class KskAttributeMaxLength extends Plugin
         ];
     }
 
-    /**
-     * @param Enlight_Event_EventArgs $args
-     */
     public function addTemplateDir(Enlight_Event_EventArgs $args)
     {
         /** @var Enlight_Controller_Action $controller */

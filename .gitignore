@@ -1,0 +1,6 @@
+# Ignore IDEs
+/.idea
+
+# Ignore package managers
+/vendor
+composer.lock
